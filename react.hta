@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>react_cdn</title>
+<hta:application
+      id="myApp"
+      applicationname="react_cdn"
+      border="thick"
+      borderstyle="normal"
+      caption="yes"
+      icon=""
+      maximizebutton="yes"
+      minimizebutton="yes"
+      showintaskbar="yes"
+      singleinstance="no"
+      sysmenu="yes"
+      version="1.0"
+      windowstate="normal"/>
+      <link
+      href="https://unpkg.com/tailwindcss@^1.0/dist/tailwind.min.css"
+      rel="stylesheet"
+    />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+
+</head>
+<body class="bg-gray-100">
+	<div id="app"></div>
+<p>
+    1:
+    <div class="vote_button_container"></div>
+    </p>
+    
+    <p>
+    2:
+    <div class="vote_button_container"></div>
+    </p>
+    
+    <p>
+    3:
+    <div class="vote_button_container"></div>
+    </p>
+    <script src="https://unpkg.com/react@16/umd/react.development.js" crossorigin></script>
+    <script src="https://unpkg.com/react-dom@16/umd/react-dom.development.js" crossorigin></script>
+    <script src="https://unpkg.com/babel-standalone@6/babel.min.js"></script>
+    <script type="text/babel">
+        'use strict';
+        class VoteButton extends React.Component {
+            constructor(props) {
+                super(props);
+                this.state = { voted: false };
+            }
+
+            render() {
+                if (this.state.voted) {
+                    return (
+                        <button onClick={() => this.setState({ voted: false })}>
+                            voted
+                        </button>
+                    )
+                } else {
+                    return (
+                        <button onClick={() => this.setState({ voted: true })}>
+                            vote
+                        </button>
+                    );
+                }
+            }
+        }
+        const json = [
+        	{
+        		name:'test1',
+        	},
+        	{
+        		name:'test2',
+        	},
+        	{
+        		name:'test3',
+        	},
+        ];
+        ReactDOM.render(
+  			<div><ul>
+  			{json.map((data) => {
+    return <li><VoteButton /></li>;
+  })}
+  <ul></div>,
+  			document.getElementById('app')
+		);
+    </script>
+</body>
+</html>
