@@ -22,7 +22,7 @@ Vue.component("tool", {
   },
   template: `
   <ul class="flex flex-row flex-wrap bg-gray-300">
-  <div class="w-1/3" v-for="item in items"><a href="{{item.url}}">
+  <div class="w-full sm:w-1/3" v-for="item in items"><a href="{{item.url}}">
   <li class="bg-white hover:bg-gray-300 rounded-lg border border-gray-500 px-2 py-1">
   <div class="text-xs text-gray-500">{{ item.summary }}</div><div>{{ item.name }}</div>
   </li>
