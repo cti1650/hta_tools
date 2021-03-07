@@ -1,3 +1,18 @@
+Vue.component("LinkButtons", {
+  props: ["items"],
+  template: `
+      <ul class="flex flex-row flex-wrap bg-gray-300">
+      <div class="w-full sm:w-1/2 lg:w-1/4 p-1" v-for="item in items">
+      <a :href="item.url" target="_blank" rel="noopener noreferrer">
+      <li class="bg-white hover:shadow-inner hover:bg-gray-300 rounded-lg border border-gray-500 px-2 py-1 shadow-lg">
+      <div class="text-xs text-gray-500">{{ item.summary }}</div><div>{{ item.name }}</div>
+      </li>
+      </a>
+      <div>
+      </ul>
+      `,
+});
+
 Vue.component("tool", {
   data: function () {
     return {
@@ -22,9 +37,9 @@ Vue.component("tool", {
   },
   template: `
   <ul class="flex flex-row flex-wrap bg-gray-300">
-  <div class="w-full sm:w-1/2" v-for="item in items.tools">
-  <a onClick="window.open({{item.url}})">
-  <li class="bg-white hover:bg-gray-300 rounded-lg border border-gray-500 px-2 py-1">
+  <div class="w-full sm:w-1/2 lg:w-1/4 p-1" v-for="item in items.tools">
+  <a :href="item.url" target="_blank" rel="noopener noreferrer">
+  <li class="bg-white hover:shadow-inner hover:bg-gray-300 rounded-lg border border-gray-500 px-2 py-1 shadow-lg">
   <div class="text-xs text-gray-500">{{ item.summary }}</div><div>{{ item.name }}</div>
   </li>
   </a>
