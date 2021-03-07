@@ -2,9 +2,9 @@ Vue.component("LinkButtons", {
   props: ["items"],
   template: `
       <ul class="flex flex-row flex-wrap">
-      <div class="w-full sm:w-1/2 lg:w-1/4 p-1 h-full" v-for="item in items">
+      <div class="w-full sm:w-1/2 lg:w-1/4 p-1" v-for="item in items">
       <a :href="item.url" target="_blank" rel="noopener noreferrer">
-      <li class="bg-gray-800 hover:shadow-inner hover:bg-gray-300 rounded-lg border border-gray-600 px-2 py-1 shadow-lg text-white hover:text-black">
+      <li class="h-full bg-gray-800 hover:shadow-inner hover:bg-gray-300 rounded-lg border border-gray-600 px-2 py-1 shadow-lg text-white hover:text-black">
       <div class="text-xs text-gray-500">{{ item.summary }}</div><div class="text-xl">{{ item.name }}</div>
       </li>
       </a>
@@ -17,9 +17,9 @@ Vue.component("ArticlesButtons", {
   props: ["items"],
   template: `
       <ul class="flex flex-row flex-wrap">
-      <div class="w-full lg:w-1/2 p-1 h-full" v-for="item in items">
+      <div class="w-full lg:w-1/2 p-1" v-for="item in items">
       <a :href="item.url" target="_blank" rel="noopener noreferrer">
-      <li class="bg-gray-800 hover:shadow-inner hover:bg-gray-300 rounded-lg border border-gray-600 px-2 py-1 shadow-lg text-white hover:text-black">
+      <li class="h-full bg-gray-800 hover:shadow-inner hover:bg-gray-300 rounded-lg border border-gray-600 px-2 py-1 shadow-lg text-white hover:text-black">
       <div class="text-xs text-gray-500">{{ item.summary }}</div><div class="text-xl">{{ item.name }}</div>
       </li>
       </a>
