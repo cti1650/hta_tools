@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Link Vue Tool</title>
+<hta:application
+      id="myApp"
+      applicationname="Link Vue Tool"
+      border="thick"
+      borderstyle="normal"
+      caption="yes"
+      icon=""
+      maximizebutton="yes"
+      minimizebutton="yes"
+      showintaskbar="yes"
+      singleinstance="no"
+      sysmenu="yes"
+      version="1.0"
+      windowstate="normal"/>
+      <link
+      href="https://unpkg.com/tailwindcss@^1.0/dist/tailwind.min.css"
+      rel="stylesheet"
+    />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+
+</head>
+<body class="bg-gray-100">
+  <p class="border-black border-l-8 border-b my-2 py-1 pl-4 h-auto">
+    <input
+      type="text"
+      class="text-xl text-left py-1 pl-2 tracking-widest border-white border-0 w-full"
+      onKeyup="test(this.value)"
+      value="Link Vue Tool"
+    />
+  </p>
+    <div class="flex flex-col space-y-4 bg-gray-200">
+      <a href="https://www.google.com/" class="py-2 text-black text-center border-1 border-gray-600 rounded-lg bg-gray-400 m-2">Google</a>
+    </div>
+    <div id="contents" class="flex flex-col space-y-1 bg-white">
+    </div>
+    <div id="app">
+    	<button-counter></button-counter>
+    	<button-counter></button-counter>
+    	<button-counter></button-counter>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.6.10/dist/vue.js"></script>
+    <script type="text/javascript" src="js/main.js"></script>
+    <script type="text/javascript">
+    	Vue.component('button-counter', {
+  data:function () {
+    return {
+      count: 0
+    }
+  },
+  template: '<button v-on:click="count++">You clicked me {{ count }} times.</button>'
+});
+
+Vue.component('test', {
+  data:function () {
+    return {
+      count: 0
+    }
+  },
+  template: '<button v-on:click="count++">' +
+  	'You clicked me {{ count }} times.' +
+ ' </button>'
+});
+    	var app = new Vue({
+		  el: "#app"
+		});
+    </script>
+</body>
+</html>
