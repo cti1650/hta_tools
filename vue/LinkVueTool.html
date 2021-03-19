@@ -44,30 +44,8 @@
     	<button-counter></button-counter>
     </div>
     <script src="https://cdn.jsdelivr.net/npm/vue@2.6.10/dist/vue.js"></script>
-    <script type="text/javascript" src="js/main.js"></script>
-    <script type="text/javascript">
-    	Vue.component('button-counter', {
-  data:function () {
-    return {
-      count: 0
-    }
-  },
-  template: '<button v-on:click="count++">You clicked me {{ count }} times.</button>'
-});
-
-Vue.component('test', {
-  data:function () {
-    return {
-      count: 0
-    }
-  },
-  template: '<button v-on:click="count++">' +
-  	'You clicked me {{ count }} times.' +
- ' </button>'
-});
-    	var app = new Vue({
-		  el: "#app"
-		});
-    </script>
+    <script type="text/javascript" src="/components/TestCounter.js"></script>
+		<script type="text/javascript" src="/components/Test.js"></script>
+    <script type="text/javascript" src="/app.js"></script>
 </body>
 </html>
