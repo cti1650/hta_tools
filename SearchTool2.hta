@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>SearchTool2</title>
+<hta:application
+      id="myApp"
+      applicationname="SearchTool2"
+      border="thick"
+      borderstyle="normal"
+      caption="yes"
+      icon=""
+      maximizebutton="yes"
+      minimizebutton="yes"
+      showintaskbar="yes"
+      singleinstance="no"
+      sysmenu="yes"
+      version="1.0"
+      windowstate="normal"/>
+      <link
+      href="https://unpkg.com/tailwindcss@^1.0/dist/tailwind.min.css"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+
+</head>
+<body class="bg-gray-100">
+  <div class="fixed top-0 left-0 border-black border-l-8 border-b bg-gray-100 my-2 py-1 pl-4 w-full h-auto">
+  	<div class="flex flex-row">
+  	<div>
+	    <input
+	      type="text"
+	      class="text-xl text-left py-1 pl-2 tracking-widest border-white border-0 w-full"
+	      onKeyup="searchData(this.value)"
+	      value=""
+	    />
+    </div>
+    <div><button class="mx-2 w-10 h-full bg-gray-400 rounded-lg" onclick="refresh()"><i class="fa fa-refresh"></i></button></div>
+    </div>
+  </div>
+    <div id="contents" class="flex flex-col mt-8 px-2 space-y-1 bg-white divide-y divide-gray-400">
+    </div>
+    <script type="text/JScript">
+    var arr = [];
+      function test(str,curPath){
+	      var fso = new ActiveXObject("Scripting.FileSystemObject");
+		  var files = fso.GetFolder(curPath).Files;
+		  var e = new Enumerator(files);
+		  for ( ; !e.atEnd(); e.moveNext()) {
+		    var file = e.item();
+		    if (file.name.indexOf(str) != -1) {
+		      var dla = new Date(file.DateLastAccessed);
+		      arr.push({
+		        name:file.name,
+		        path:file.path,
+		        accessed:dla.toString(),
+		      });
+		    }
+		  }
+		  var files = fso.GetFolder(curPath).SubFolders;
+		  var e = new Enumerator(files);
+		  for ( ; !e.atEnd(); e.moveNext()) {
+		    var folda = e.item();
+		    if (folda.name.indexOf(str) != -1) {
+		      var dla = new Date(folda.DateLastAccessed);
+		      arr.push({
+		        name:folda.name,
+		        path:folda.path,
+		        accessed:dla.toString(),
+		      });
+		    }
+		  }
+		  return arr;
+	}
+	function searchData(str){
+		document.getElementById("contents").innerHTML = "";
+		for (let i = 0; i < arr.length; i++) {
+			if (arr[i].name.toLowerCase().indexOf(str.toLowerCase()) != -1) {
+				ele = document.createElement('a');
+				ele.innerHTML = arr[i].name;
+				ele.href = arr[i].path;
+				ele.className = "my-0 pt-1 text-black text-left text-xs bg-white";
+				document.getElementById("contents").appendChild(ele);
+			}
+		}
+	}
+	function refresh(){
+		arr = [];
+		test("","./");
+	}
+	refresh();
+      </script>
+</body>
+</html>
