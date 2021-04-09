@@ -1,9 +1,9 @@
 <!DOCTYPE html>
 <html>
-<head>
-<meta charset="UTF-8">
-<title>Link Vue Tool</title>
-<hta:application
+  <head>
+    <meta charset="UTF-8" />
+    <title>Link Vue Tool</title>
+    <hta:application
       id="myApp"
       applicationname="Link Vue Tool"
       border="thick"
@@ -16,33 +16,50 @@
       singleinstance="no"
       sysmenu="yes"
       version="1.0"
-      windowstate="normal"/>
-      <link
+      windowstate="normal"
+    />
+    <link
       href="https://unpkg.com/tailwindcss@^1.0/dist/tailwind.min.css"
       rel="stylesheet"
     />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-
-</head>
-<body class="bg-gray-100">
-   <div id="app">
-      <title-header>
-            Link Vue Tool
-      </title-header>
+  </head>
+  <body class="bg-gray-100">
+    <div id="app">
+      <title-header> Link Vue Tool </title-header>
       <div class="flex flex-col space-y-4 bg-gray-200">
-      <a href="https://www.google.com/" class="py-2 text-black text-center border-1 border-gray-600 rounded-lg bg-gray-400 m-2">Google</a>
+        <a
+          href="https://www.google.com/"
+          class="py-2 text-black text-center border-1 border-gray-600 rounded-lg bg-gray-400 m-2"
+          >Google</a
+        >
       </div>
-      <div id="contents" class="flex flex-col space-y-1 bg-white">
-      </div>
-    
-    	<button-counter></button-counter>
-    	<button-counter></button-counter>
-    	<button-counter></button-counter>
+      <div id="contents" class="flex flex-col space-y-1 bg-white"></div>
+
+      <button-counter></button-counter>
+      <button-counter></button-counter>
+      <button-counter></button-counter>
     </div>
     <script src="https://cdn.jsdelivr.net/npm/vue@2.6.10/dist/vue.js"></script>
-    <script type="text/javascript" src="https://cti1650.github.io/hta_tools/vue/components/TitleHeader.js"></script>
-    <script type="text/javascript" src="https://cti1650.github.io/hta_tools/vue/components/ButtonCounter.js"></script>
-    <script type="text/javascript" src="https://cti1650.github.io/hta_tools/vue/components/Test.js"></script>
-    <script type="text/javascript" src="https://cti1650.github.io/hta_tools/vue/app.js"></script>
-</body>
+    <script
+      type="text/javascript"
+      src="https://cti1650.github.io/hta_tools/sample_data/file_list.js"
+    ></script>
+    <script
+      type="text/javascript"
+      src="https://cti1650.github.io/hta_tools/vue/components/TitleHeader.js"
+    ></script>
+    <script
+      type="text/javascript"
+      src="https://cti1650.github.io/hta_tools/vue/components/ButtonCounter.js"
+    ></script>
+    <script
+      type="text/javascript"
+      src="https://cti1650.github.io/hta_tools/vue/components/Test.js"
+    ></script>
+    <script
+      type="text/javascript"
+      src="https://cti1650.github.io/hta_tools/vue/app.js"
+    ></script>
+  </body>
 </html>
