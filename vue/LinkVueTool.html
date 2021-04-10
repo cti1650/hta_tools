@@ -30,7 +30,6 @@
   </head>
   <body class="bg-gray-100">
     <div id="app">
-      <title-header> Link Vue Tool </title-header>
       <div class="flex flex-col space-y-4 bg-gray-200">
         <a
           href="https://www.google.com/"
@@ -39,16 +38,14 @@
         >
       </div>
       <div id="contents" class="flex flex-col space-y-1 bg-white"></div>
-
-      <button-counter></button-counter>
-      <button-counter></button-counter>
-      <button-counter></button-counter>
+      <search-list-box />
     </div>
     <script src="https://cdn.jsdelivr.net/npm/vue@2.6.10/dist/vue.js"></script>
     <script
       type="text/javascript"
       src="https://cti1650.github.io/hta_tools/sample_data/file_list.js"
     ></script>
+    <script type="text/javascript" src="./components/SearchListBox.js"></script>
     <script
       type="text/javascript"
       src="https://cti1650.github.io/hta_tools/vue/components/TitleHeader.js"
