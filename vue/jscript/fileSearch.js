@@ -76,6 +76,7 @@ function fileSearch(curPath) {
         accessed: getStringFromDate(new Date()),
       },
     ];
+    console.log(e);
   }
   return jsonData;
 }
