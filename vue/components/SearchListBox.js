@@ -41,7 +41,7 @@ Vue.component("SearchListBox", {
     "     </div>" +
     "   </div>" +
     " </div>" +
-    ' <div id="contents" class="flex flex-col bg-white">' +
+    ' <div id="contents" class="flex flex-col bg-white pt-16">' +
     '   <div v-for="item in items" :key="item.name">' +
     '     <div v-if="~item.name.toLowerCase().indexOf(keyword.toLowerCase())" class="mb-1">' +
     "       {{item.name}}" +

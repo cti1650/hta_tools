@@ -73,18 +73,13 @@
       console.log(jsonData);
     </script>
     <div id="app">
-      <div class="flex flex-col space-y-4 bg-gray-200">
-        <a
-          href="https://www.google.com/"
-          class="py-2 text-black text-center border-1 border-gray-600 rounded-lg bg-gray-400 m-2"
-          >Google</a
-        >
-      </div>
-      <!-- <div id="contents" class="flex flex-col space-y-1 bg-white"></div> -->
       <search-list-box @update="refresh()" />
     </div>
     <script src="https://cdn.jsdelivr.net/npm/vue@2.6.10/dist/vue.js"></script>
-    <script type="text/javascript" src="./components/SearchListBox.js"></script>
+    <script
+      type="text/javascript"
+      src="https://cti1650.github.io/hta_tools/vue/components/SearchListBox.js"
+    ></script>
     <script
       type="text/javascript"
       src="https://cti1650.github.io/hta_tools/vue/components/TitleHeader.js"
