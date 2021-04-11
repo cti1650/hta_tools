@@ -1,4 +1,4 @@
-var json = [
+var jsonData = [
   {
     name: "file1.name",
     path: "file.path",
