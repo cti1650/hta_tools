@@ -18,7 +18,7 @@ Vue.component("SearchListBox", {
     },
   },
   template:
-    "<div>" +
+    '<div class="w-full">' +
     " <div" +
     '   class="fixed top-0 left-0 border-black border-l-8 border-b bg-gray-100 my-2 py-1 pl-4 w-full h-auto"' +
     " >" +
@@ -45,7 +45,7 @@ Vue.component("SearchListBox", {
     '   <div v-for="item in items" :key="item.name">' +
     '     <div v-if="~item.name.toLowerCase().indexOf(keyword.toLowerCase())" class="mb-1">' +
     '       <a :href="item.path">' +
-    '         <div class="text-xs text-gray-400">{{item.path}}</div><div class="text-lg">{{item.name}}</div>' +
+    '         <div class="text-xs text-gray-400">{{item.path}}</div><div class="pl-2 text-lg">{{item.name}}</div>' +
     "       </a>" +
     "     </div>" +
     "   </div>" +
