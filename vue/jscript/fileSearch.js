@@ -8,7 +8,7 @@ function getStringFromDate(date) {
   var minute = date.getMinutes();
   var second = date.getSeconds();
 
-  format = "YYYY-MM-DD hh:mm:ss";
+  format = "YYYY-MM-DD";
   format = format.replace(/YYYY/g, year);
   format = format.replace(/MM/g, month);
   format = format.replace(/DD/g, day);
