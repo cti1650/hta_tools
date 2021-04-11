@@ -27,50 +27,15 @@
       href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
     />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <script>
-      var jsonData = [
-        {
-          name: "file1.name",
-          path: "file.path",
-          accessed: "dla.toString()",
-        },
-        {
-          name: "file2.name",
-          path: "file.path",
-          accessed: "dla.toString()",
-        },
-        {
-          name: "file3.name",
-          path: "file.path",
-          accessed: "dla.toString()",
-        },
-        {
-          name: "file4.name",
-          path: "file2.path",
-          accessed: "dla.toString()",
-        },
-        {
-          name: "file5.name",
-          path: "file2.path",
-          accessed: "dla.toString()",
-        },
-        {
-          name: "file6.name",
-          path: "file2.path",
-          accessed: "dla.toString()",
-        },
-      ];
-    </script>
   </head>
   <body class="bg-gray-100">
+    <script type="text/JScript" src="./jscript/fileSearch.js"></script>
     <script>
       function refresh() {
-        jsonData.push({
-          name: "append " + (jsonData.length + 1),
-        });
-        console.log("append Item");
+        jsonData = [];
+        fileSearch("", "./");
       }
-      console.log(jsonData);
+      refresh();
     </script>
     <div id="app">
       <search-list-box @update="refresh()" />
