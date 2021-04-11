@@ -37,6 +37,8 @@
       function refresh() {
         jsonData = [];
         fileSearch("./");
+        console.log("refresh");
+        return jsonData;
       }
       refresh();
     </script>
@@ -51,10 +53,15 @@
     <script type="text/javascript">
       var app = new Vue({
         el: "#app",
+        data: function (props) {
+          return {
+            json: jsonData,
+          };
+        },
         methods: {
           refresh: function () {
             console.log("do click");
-            refresh();
+            this.json = refresh();
           },
         },
       });
