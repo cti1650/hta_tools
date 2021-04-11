@@ -48,32 +48,32 @@ function fileSearch(curPath) {
       {
         name: "file1.name",
         path: "file.path",
-        accessed: getStringFromDate(now()),
+        accessed: getStringFromDate(new Date()),
       },
       {
         name: "file2.name",
         path: "file.path",
-        accessed: getStringFromDate(now()),
+        accessed: getStringFromDate(new Date()),
       },
       {
         name: "file3.name",
         path: "file.path",
-        accessed: getStringFromDate(now()),
+        accessed: getStringFromDate(new Date()),
       },
       {
         name: "file4.name",
         path: "file2.path",
-        accessed: getStringFromDate(now()),
+        accessed: getStringFromDate(new Date()),
       },
       {
         name: "file5.name",
         path: "file2.path",
-        accessed: getStringFromDate(now()),
+        accessed: getStringFromDate(new Date()),
       },
       {
         name: "file6.name",
         path: "file2.path",
-        accessed: getStringFromDate(now()),
+        accessed: getStringFromDate(new Date()),
       },
     ];
   }
